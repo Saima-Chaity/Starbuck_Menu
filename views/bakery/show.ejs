@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+<div class="wholePage">
+    <table>
+        <tbody>
+            <tr>
+                <td><img class="img" src="<%= bakery.Image %>"></td>
+                <td>
+                    <div class="body" >
+                        <h1><%= bakery.Title %></h1>
+                        <p><strong>Ingredients:</strong><br><%- bakery.Description %></p>
+                        <span><strong><%= bakery.created.toDateString() %></strong></span>
+                        <% if(currentUser && bakery.Author.id.equals(currentUser._id)){%>
+                        <button class="btn btn-xs btn-success" ><a class="button" href= "/bakery/<%= bakery._id%>/edit">Edit</a></button> 
+                        <form class="button" action= "/bakery/<%= bakery._id%>?_method=DELETE" method="POST">
+                            <input type="submit" class="btn btn-xs btn-danger" value="Delete Post">
+                        </form>
+                        <% } %>
+                    <div>
+                 </td>
+            </tr>
+        </tbody>
+    </table>
+    <a href= "/bakery/<%= bakery._id%>/comment/new">
+        <span class="pull-right"><button class="btn-success">Add New comment</button></span>
+    </a>
+    <br>
+    <% bakery.comments.forEach(function(comment){ %>
+        <hr>
+        <strong><%=comment.Author.username%></strong>
+        <span class="pull-right"><strong><%= comment.created.toDateString()%></strong></span>
+        <p><%=comment.Text%></p>
+        <% if(currentUser && comment.Author.id.equals(currentUser._id)){%>
+            <button class="btn btn-xs btn-success">
+                <a class="button" href="/bakery/<%=bakery._id%>/comment/<%=comment._id%>/edit">Edit Comment</a>
+            </button>
+            <form class="button" action="/bakery/<%=bakery._id%>/comment/<%=comment._id%>?_method=DELETE" method="POST" >
+                <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+            </form>
+        <% } %>
+    <% }) %>  
+</div>
+<% include  ../partials/footer %>

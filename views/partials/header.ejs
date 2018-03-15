@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Starbucks Coffee</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href= "/stylesheets/landing.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    </head>
+    <body>
+        <div class= "border"></div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <img class="navbar-brand" src="http://wjon.com/files/2014/03/Photo_TBD-320x411_1.jpg?w=600&h=0&zc=1&s=0&a=t&q=89" >
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="navBar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/coffee">Coffee</a></li>
+                            <li><a href="/tea">Tea</a></li>
+                            <li><a href="/drink">Iced Drink</a></li>
+                            <li><a href="/bakery">Bakery</a></li>
+                        </ul>  
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="navRight"><a href="/">Layout</a></li>
+                        <% if(!currentUser){ %>
+                            <li class="navRight"><a href="/login">Login</a></li>
+                            <li class="navRight"><a href="/register">SignUp</a></li>
+                        <% }else{ %>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">New Post <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/coffee/new">New Post To Coffee</a></li>
+                                    <li><a href="/tea/new">New Post To Tea</a></li>
+                                    <li><a href="/drink/new">New Post To Iced Drink</a></li>
+                                    <li><a href="/bakery/new">New Post To Bakery</a></li>
+                                </ul>
+                            </li>
+                            <li class="navRight"><a href="#">Signed In as <%=currentUser.username%></a></li>
+                            <li class="navRight"><a href="/logout">Sign Out</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        

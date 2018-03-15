@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="newform">
+            <h1>Edit <%=bakery.Title%> Recipe</h1>
+            <form action="/bakery/<%=bakery._id%>?_method=PUT" method="POST">
+                <level>Title</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name = "bakery[Title]" value= "<%=bakery.Title%>">
+                </div>
+                <level>Image</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="bakery[Image]" value= "<%=bakery.Image%>">
+                </div>
+                <level>Price</level>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="bakery[Price]" value= "<%=bakery.price%>">
+                </div>
+                <level>Description</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="bakery[Description]" value= "<%=bakery.Description%>">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include  ../partials/footer %>

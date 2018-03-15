@@ -1,0 +1,34 @@
+
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="newform">
+            <h1>Edit <%=drink.Title%> Recipe</h1>
+            <form action="/drink/<%=drink.id%>?_method=PUT" method="POST">
+                <level>Title</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name = "drink[Title]" value= "<%=drink.Title%>">
+                </div>
+                <level>Image</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="drink[Image]" value= "<%=drink.Image%>">
+                </div>
+                <level>Price</level>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="drink[Price]" value= "<%=drink.price%>">
+                </div>
+                <level>Description</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="drink[Description]" value= "<%=drink.Description%>">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<% include  ../partials/footer %>

@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="newform">
+            <h1>Add More Drink Recipe</h1>
+            <form action="/drink" method="POST">
+                <level>Title</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name ="Title" placeholder= "Title">
+                </div>
+                <level>Image</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Image" placeholder= "Image">
+                </div>
+                <level>Price</level>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="Price" placeholder= "price">
+                </div>
+                <level>Description</level>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Description" placeholder= "Description">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,131 @@
+.header{
+    padding-bottom: 10px;
+}
+.middle{
+    background-color: grey;
+    color: white;
+    text-align: left;
+    width: 100%;
+    height: 450px;
+    padding-top: 30px;
+}
+
+.middle h2{
+    padding-top: 20px;
+    padding-left: 10px;
+   
+}
+.middle p{
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: Italic;
+}
+
+.middle img{
+    float: right;
+    padding-top: 15px;
+}
+.footer{
+    background-image: url("http://www.fleetwalkshoppingtorquay.co.uk/new2016/wp-content/uploads/2016/10/bg-how_to_brew-1024x341.jpg");
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.footer h2{
+    padding-top: 40px;
+    padding-left: 10px;
+   
+}
+
+.footer p{
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: Italic;
+    padding-right: 800px;
+}
+
+.contact{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.contact a{
+    font-size: 30px;
+    padding-left: 10px;
+}
+.border{
+    border: 20px solid green;
+    color:green;
+}
+.navbar-brand{
+    width: 120px; 
+    height: 110px;
+}
+
+.navBar ul li{
+    padding-top: 55px;
+    padding-bottom: 0px;
+}
+.navRight{
+    padding-top: 55px;
+    padding-bottom: 0px;
+}
+.dropdown {
+    padding-top: 55px;
+    padding-bottom: 0px;
+}
+
+.nav > li.dropdown.open {
+    position: static;
+}
+.nav > li.dropdown.open .dropdown-menu {
+    display:table; width: 100%; text-align: left;  right:0;
+}
+
+.dropdown-menu>li {
+    display: list-item;
+    list-style: none;
+}
+
+.button{
+    display: inline;
+}
+
+.body{
+    border: 10px solid white;
+    padding-left: 5px;
+    margin-top:  5px;
+}
+
+.img{
+    width: 500px;
+    height:370px;
+}
+
+.authform{
+    margin: 0 auto;
+    width: 30%;
+}
+
+.thumbnail{
+    height:500px;
+}
+
+.thumbnail img{
+    height: 350px;
+    
+}
+
+.wholePage{
+    border:10px solid white;
+}
+
+.readMore{
+    border:none;
+    margin-left: 0 auto;
+    
+}

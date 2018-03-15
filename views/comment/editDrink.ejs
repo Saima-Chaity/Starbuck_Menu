@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="newform">
+            <h1>Edit Comment</h1>
+            <form action="/drink/<%=drink_id%>/comment/<%=comment._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name ="comment[Text]" placeholder= "Put your comment here" value="<%=comment.Text%>">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include  ../partials/footer %>
