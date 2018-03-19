@@ -2,7 +2,7 @@
 
 **Demo:**
 
-[https://fathomless-everglades-75052.herokuapp.com](url)
+https://fathomless-everglades-75052.herokuapp.com
 
 **Build width:**
 
